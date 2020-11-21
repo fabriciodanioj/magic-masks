@@ -8,4 +8,8 @@ describe('Zip code tests', () => {
   test('Zip code likes string', () => {
     expect(zipCode('15650000')).toBe('15650-000');
   });
+
+  test('Zip code over size', () => {
+    expect(zipCode('15650000111')).toBe('15650-000');
+  });
 });
